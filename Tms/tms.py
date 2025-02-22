@@ -72,3 +72,39 @@ class Tms:
 				c += 1
 			l += 1
 		return c_txt
+	def data_crypt(self, data):
+		c_data = []
+		lent = len(self.keya)
+		if lent**2 >= len(data):
+			pass
+		else:
+			return -1
+		l = 0
+		c = 0
+		while (l*lent+c) < len(data):
+			c = 0
+			while c < lent:
+				if c+l*lent >= len(txt):
+					break
+				c_data.append(data[c+l*lent]+self.keya[c] + self.keyb[l])
+				c += 1
+			l += 1
+		return c_data
+	def data_decrypt(self, data):
+		c_data = []
+		lent = len(self.keya)
+		if lent**2 >= len(data):
+			pass
+		else:
+			return -1
+		l = 0
+		c = 0
+		while (l*lent+c) < len(data):
+			c = 0
+			while c < lent:
+				if c+l*lent >= len(txt):
+					break
+				c_data.append(data[c+l*lent]-self.keya[c] - self.keyb[l])
+				c += 1
+			l += 1
+		return c_data
