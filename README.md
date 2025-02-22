@@ -1,1 +1,1 @@
-# All the criptography of Swelshin
+# All the cryptography of Swelshin
