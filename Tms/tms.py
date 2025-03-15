@@ -19,10 +19,21 @@ def small_random(seed):
 
 # sqrt(longitud_datos)*2
 
+def normal_tms(data, passwords, mode):
+	
+	new_text = [[0]*len(passwords[0]) for _ in range(len(passwords[1]))]
+	for x in range(len(data)):
+		for y in range(len(data[0])):
+			if mode=="encrypt":
+				new_text[x][y] = data[x][y] + (passwords[0][x] + passwords[1][y])
+			elif mode=="decrypt":
+				new_text[x][y] = data[x][y] - (passwords[0][x] + passwords[1][y])
+	return new_text
+
 class Tms:
-	def __init__(self, seed_1, seed_2):
-		self.seeda = seed_1
-		self.seedb = seed_2
+	def __init__(self):
+		self.seeda = seeda
+		self.seedb = seedb
 		self.keya = []
 		self.keyb = []
 	def gen_key(self, len):
