@@ -32,3 +32,7 @@ print("Datos Cifrados: " + str(datos_cifrados))
 datos_descifrados = tms(datos_cifrados, contraseñas, "decrypt")
 print("Datos Descifrados: " + str(datos_descifrados))
 ```
+## Leira v4 (las demás versiones no estan disponibles)
+**Leira v4** es un cifrado asimétrico.
+
+*Proximamente*
